@@ -42,7 +42,8 @@
       const date = document.getElementById("date").value;
       const hour = parseInt(document.getElementById("hour").value, 10);
 
-      const url = `http://127.0.0.1:8000/forecast?date=${date}&hour=${hour}`;
+      const API_BASE = "https://lapd-crime-analysis.onrender.com";
+      const url = `${API_BASE}/forecast?date=${date}&hour=${hour}`;
       const res = await fetch(url);
       const data = await res.json();
 
@@ -65,3 +66,4 @@
   </script>
 </body>
 </html>
+
